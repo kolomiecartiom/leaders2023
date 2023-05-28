@@ -1,0 +1,63 @@
+{
+  "name": "consumer  for extract package prescription to stg1",
+  "version": "1.0",
+  "culture": "ru-RU",
+  "entities": [
+    {
+      "$type": "LocalEntity",
+      "name": "d_package_prescription",
+      "annotations": [
+        {
+          "name": "schema",
+          "value": "stg1_xls"
+        },
+        {
+          "name": "precreateEntity",
+          "value": true
+        },
+        {
+          "name": "enforceStrictMapping",
+          "value": true
+        },
+        {
+          "name": "recreateIfOutOfSync",
+          "value": true
+        }
+      ],
+      "attributes": [
+        {
+          "name": "filename",
+          "dataType": "text"
+        },
+        {
+          "name": "section",
+          "dataType": "text"
+        },
+        {
+          "name": "subsection",
+          "dataType": "text"
+        },
+        {
+          "name": "mkb_code",
+          "dataType": "text"
+        },
+        {
+          "name": "prescription_subcategory",
+          "dataType": "text"
+        },
+        {
+          "name": "prescription_name",
+          "dataType": "text"
+        },
+        {
+          "name": "prescription_mandatory",
+          "dataType": "text"
+        },
+        {
+          "name": "criteria",
+          "dataType": "text"
+        }
+      ]
+    }
+  ]
+}

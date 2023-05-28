@@ -1,0 +1,82 @@
+{
+  "name": "producer for extract package prescription",
+  "version": "1.0",
+  "culture": "ru-RU",
+  "entities": [
+    {
+      "$type": "ExcelFileEntity",
+      "name": "d_package_prescription",
+      "path": "{{ AF_FILEPATH }}/::^.+\\.xlsx$::",
+      "annotations": [
+        {
+          "name": "reInPathDelimiter",
+          "value": "::"
+        },
+        {
+          "name": "rowsNumberToSkip",
+          "value": 1
+        },
+        {
+          "name": "skipHiddenParts",
+          "value": false
+        },
+        {
+          "name": "detectMergedCells",
+          "value": true
+        },
+        {
+          "name": "sheetName",
+          "value": "Лист1"
+        },
+        {
+          "name": "archiveFolder",
+          "value": "{{ AF_ARCHIVE_FOLDER }}/package_prescription/{{ AF_RUN_ID }}"
+        },
+        {
+          "name": "failedFolder",
+          "value": "{{ AF_FAILED_FOLDER }}/package_prescription/{{ AF_RUN_ID }}"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "filename",
+          "ordinal": 0,
+          "annotations": [
+            {
+              "name": "const",
+              "value": "fileName"
+            }
+          ]
+        },
+        {
+          "name": "section",
+          "ordinal": 1
+        },
+        {
+          "name": "subsection",
+          "ordinal": 2
+        },
+        {
+          "name": "mkb_code",
+          "ordinal": 3
+        },
+        {
+          "name": "prescription_subcategory",
+          "ordinal": 4
+        },
+        {
+          "name": "prescription_name",
+          "ordinal": 5
+        },
+        {
+          "name": "prescription_mandatory",
+          "ordinal": 6
+        },
+        {
+          "name": "criteria",
+          "ordinal": 7
+        }
+      ]
+    }
+  ]
+}

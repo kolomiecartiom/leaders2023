@@ -1,0 +1,2 @@
+truncate table stg1_xls.d_package_prescription;
+truncate table stg1_xls.doc_prescriptions;

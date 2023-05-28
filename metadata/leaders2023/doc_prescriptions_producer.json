@@ -1,0 +1,98 @@
+{
+  "name": "producer for extract protocol",
+  "version": "1.0",
+  "culture": "ru-RU",
+  "entities": [
+    {
+      "$type": "ExcelFileEntity",
+      "name": "doc_prescriptions",
+      "path": "{{ AF_FILEPATH }}/::^.+\\.xlsx$::",
+      "annotations": [
+        {
+          "name": "reInPathDelimiter",
+          "value": "::"
+        },
+        {
+          "name": "rowsNumberToSkip",
+          "value": 1
+        },
+        {
+          "name": "skipHiddenParts",
+          "value": false
+        },
+        {
+          "name": "detectMergedCells",
+          "value": true
+        },
+        {
+          "name": "sheetName",
+          "value": "Sheet1"
+        },
+        {
+          "name": "archiveFolder",
+          "value": "{{ AF_ARCHIVE_FOLDER }}/doc_prescriptions/{{ AF_RUN_ID }}"
+        },
+        {
+          "name": "failedFolder",
+          "value": "{{ AF_FAILED_FOLDER }}/doc_prescriptions/{{ AF_RUN_ID }}"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "filename",
+          "ordinal": 0,
+          "annotations": [
+            {
+              "name": "const",
+              "value": "fileName"
+            }
+          ]
+        },
+        {
+          "name": "patient_gender",
+          "ordinal": 1
+        },
+        {
+          "name": "dt_patient_birth",
+          "ordinal": 2
+        },
+        {
+          "name": "patient_id",
+          "ordinal": 3
+        },
+        {
+          "name": "mkb_code",
+          "ordinal": 4
+        },
+        {
+          "name": "mkb_name",
+          "ordinal": 5
+        },
+        {
+          "name": "dt_service",
+          "ordinal": 6
+        },
+        {
+          "name": "doctor_position",
+          "ordinal": 7
+        },
+        {
+          "name": "doctor_prescription",
+          "ordinal": 8
+        },
+        {
+          "name": "med_institution_name",
+          "ordinal": 9
+        },
+        {
+          "name": "doctor_id",
+          "ordinal": 10
+        },
+        {
+          "name": "doctor_name",
+          "ordinal": 11
+        }
+      ]
+    }
+  ]
+}

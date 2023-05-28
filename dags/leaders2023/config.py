@@ -1,0 +1,5 @@
+log_level = 'info' # 'error', 'warning', 'info', 'debug'
+project_dir = 'leaders2023'
+dwh_db_conn = 'leaders2023_dwh_db'
+sf_postgresql_conn = 'leaders2023_sf_postgresql'
+visiology_conn = 'leaders2023_visiology'

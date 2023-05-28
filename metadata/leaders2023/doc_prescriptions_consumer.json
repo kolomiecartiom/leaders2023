@@ -1,0 +1,79 @@
+{
+  "name": "consumer  for extract protocol to stg1",
+  "version": "1.0",
+  "culture": "ru-RU",
+  "entities": [
+    {
+      "$type": "LocalEntity",
+      "name": "doc_prescriptions",
+      "annotations": [
+        {
+          "name": "schema",
+          "value": "stg1_xls"
+        },
+        {
+          "name": "precreateEntity",
+          "value": true
+        },
+        {
+          "name": "enforceStrictMapping",
+          "value": true
+        },
+        {
+          "name": "recreateIfOutOfSync",
+          "value": true
+        }
+      ],
+      "attributes": [
+        {
+          "name": "filename",
+          "dataType": "text"
+        },
+        {
+          "name": "patient_gender",
+          "dataType": "text"
+        },
+        {
+          "name": "dt_patient_birth",
+          "dataType": "text"
+        },
+        {
+          "name": "patient_id",
+          "dataType": "text"
+        },
+        {
+          "name": "mkb_code",
+          "dataType": "text"
+        },
+        {
+          "name": "mkb_name",
+          "dataType": "text"
+        },
+        {
+          "name": "dt_service",
+          "dataType": "text"
+        },
+        {
+          "name": "doctor_position",
+          "dataType": "text"
+        },
+        {
+          "name": "doctor_prescription",
+          "dataType": "text"
+        },
+        {
+          "name": "med_institution_name",
+          "dataType": "text"
+        },
+        {
+          "name": "doctor_id",
+          "dataType": "text"
+        },
+        {
+          "name": "doctor_name",
+          "dataType": "text"
+        }
+      ]
+    }
+  ]
+}
